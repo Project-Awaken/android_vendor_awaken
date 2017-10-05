@@ -19,4 +19,6 @@
     <!-- Color Picker -->
     <dimen name="oval_notification_size">26dp</dimen>
 
+    <dimen name="two_target_min_width">72dp</dimen>
+
 </resources>
