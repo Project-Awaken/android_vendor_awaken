@@ -80,6 +80,13 @@ PRODUCT_PACKAGES += \
     SystemMaterialOceanOverlay \
     SystemUIMaterialOceanOverlay \
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Local Updater
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_PACKAGES += \
