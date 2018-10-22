@@ -28,6 +28,7 @@ CL_GRN="\033[32m"
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(AWAKEN_TARGET_PACKAGE)
 	$(hide) $(SHA256) $(AWAKEN_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(AWAKEN_TARGET_PACKAGE).sha256sum
+	$(hide) ./vendor/awaken/tools/generate_json_build_info.sh $(AWAKEN_TARGET_PACKAGE)
 	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
 	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(AWAKEN_TARGET_PACKAGE)${CL_RST}
 	echo -e ${CL_BLD}${CL_GRN}"SHA256: "${CL_RED}" `cat $(AWAKEN_TARGET_PACKAGE).sha256sum | awk '{print $$1}' `"${CL_RST}
