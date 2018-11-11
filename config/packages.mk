@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
     QStileDottedCircle \
     QStileNinja \
     QStilePokesign \
-    QStileWavey
+    QStileWavey \
+    QStileSquaremedo
 
 # Local Updater
 ifneq ($(AB_OTA_PARTITIONS),)
