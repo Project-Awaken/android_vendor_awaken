@@ -84,6 +84,11 @@ ifeq ($(call is-board-platform-in-list, $(UM_PLATFORMS)),true)
     TARGET_USES_QCOM_UM_FAMILY := true
 endif
 
+# Allow a device to manually override which HALs it wants to use
+ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
+QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
+endif
+
 PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 
 # Add data-ipa-cfg-mgr to PRODUCT_SOONG_NAMESPACES if needed
