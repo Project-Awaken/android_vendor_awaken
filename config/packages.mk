@@ -91,6 +91,7 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
+    QStileInkDrop \
     QStileSquaremedo
 
 # Local Updater
