@@ -97,6 +97,11 @@ include vendor/awaken/config/pixel2-audio_prebuilt.mk
 # Bootanimation
 include vendor/awaken/config/bootanimation.mk
 
+# Cutout control overlays
+PRODUCT_PACKAGES += \
+    HideCutout \
+    StatusBarStock
+
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
