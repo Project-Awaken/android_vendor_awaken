@@ -78,7 +78,7 @@ PRODUCT_PACKAGES += \
     SystemAwakenClearOverlay \
     SystemUIAwakenClearOverlay \
     SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
+    SystemUIMaterialOceanOverlay
 
 # QS tile styles
 PRODUCT_PACKAGES += \
@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
     QStileWavey \
     QStileCookie \
     QStileInkDrop \
-    QStileSquaremedo
+    QStileSquaremedo \
+    QStileCircleOutline
 
 # Local Updater
 ifneq ($(AB_OTA_PARTITIONS),)
