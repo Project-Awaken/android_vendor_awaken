@@ -75,6 +75,9 @@ ifeq ($(USE_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 endif
 
+# Fonts
+include vendor/awaken/config/fonts.mk
+
 # Include AOSP audio files
 include vendor/awaken/config/aosp_audio.mk
 
