@@ -69,6 +69,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Gapps
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 
+# Fonts
+include vendor/awaken/config/fonts.mk
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
