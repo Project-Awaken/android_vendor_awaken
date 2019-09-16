@@ -8,6 +8,17 @@ PRODUCT_PACKAGES += \
     StitchImage \
     ThemePicker
 
+# Custom Overlays
+# Settings
+PRODUCT_PACKAGES += \
+    SystemPitchBlackOverlay \
+    SystemDarkGrayOverlay \
+    SystemUIDarkGrayOverlay \
+    SystemStyleOverlay \
+    SystemUIStyleOverlay \
+    SystemNightOverlay \
+    SystemUINightOverlay
+
 # Local Updater
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_PACKAGES += \
