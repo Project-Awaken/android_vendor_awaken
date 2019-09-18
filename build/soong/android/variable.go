@@ -96,6 +96,9 @@ type Product_variables struct {
 	Healthd_use_battery_info struct {
 		Cflags []string
 	}
+	Target_camera_needs_client_info struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -129,4 +132,5 @@ type ProductVariables struct {
 	Qcom_um_soong_namespace  *string `json:",omitempty"`
 	Recovery_skip_ev_rel_input  *bool `json:",omitempty"`
 	Healthd_use_battery_info  *bool `json:",omitempty"`
+	Target_camera_needs_client_info  					*bool `json:",omitempty"`
 }
