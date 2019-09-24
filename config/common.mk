@@ -77,7 +77,7 @@ include vendor/awaken/config/fonts.mk
 
 # Gapps
 ifeq ($(USE_GAPPS),true)
-$(call inherit-product, vendor/gapps/gapps.mk)
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 endif
 
 
@@ -106,7 +106,8 @@ $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    SettingsIntelligenceGooglePrebuilt
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -115,6 +116,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    vendor/awaken/config/permissions/privapp-permissions-awaken-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-awaken.xml
 
 # Root
 PRODUCT_PACKAGES += \
