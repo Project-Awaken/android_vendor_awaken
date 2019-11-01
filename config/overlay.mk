@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FontArbutusSourceOverlay \
     FontArvoLatoOverlay \
+    FontInterOverlay \
     FontRubikRubikOverlay \
     FontOnePlusSlateOverlay \
     FontBarlowOverlay \
