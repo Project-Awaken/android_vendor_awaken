@@ -133,6 +133,7 @@ PRODUCT_COPY_FILES += \
 
 # Themes
 PRODUCT_PACKAGES += \
+    AwakenThemesStub \
     ThemePicker
 
 # Charger
