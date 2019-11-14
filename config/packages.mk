@@ -6,7 +6,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomDoze \
     StitchImage \
-    ThemePicker
+    ThemePicker \
+    LatinIMEGooglePrebuilt
 
 # Custom Overlays
 # Settings
