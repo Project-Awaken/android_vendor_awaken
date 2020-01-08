@@ -7,20 +7,22 @@ if [ "$1" ]; then
     file_path=$1
     file_name=$(basename "$file_path")
     if [ -f $file_path ]; then
-        if [[ $file_name == *"Official"* ]]; then # only generate for official builds
-            file_size=$(stat -c%s $file_path)
-            md5=$(cat "$file_path.md5sum" | cut -d' ' -f1)
+        # only generate for official builds. unless forced with 'export FORCE_JSON=1'
+        if [[ $file_name == *"Official"* ]] || [[ $FORCE_JSON == 1 ]]; then
+            if [[ $FORCE_JSON == 1 ]]; then
+                echo -e "${GREEN}Forced generation of json${NC}"
+            fi
             datetime=$(grep ro\.build\.date\.utc $OUT/system/build.prop | cut -d= -f2)
-            id=$(sha256sum $file_path | awk '{ print $1 }')
-            link="https://sourceforge.net/projects/project-awaken/files/${AWAKEN_BUILD}/${file_name}/download"
+            # id=$(sha256sum $file_path | awk '{ print $1 }')
+            # link="https://sourceforge.net/projects/project-awaken/files/${AWAKEN_BUILD}/${file_name}/download"
             echo "{" > $file_path.json
             echo "   \"datetime\": ${datetime}," >> $file_path.json
             echo "   \"filename\": \"${file_name}\"," >> $file_path.json
-            echo "   \"id\": \"${id}\"," >> $file_path.json
-            echo "   \"romtype\": \"Official\"," >> $file_path.json
-            echo "   \"size\": ${file_size}," >> $file_path.json
-            echo "   \"url\": \"${link}\"," >> $file_path.json
-            echo "   \"version\": \"10\"" >> $file_path.json
+            # echo "   \"id\": \"${id}\"," >> $file_path.json
+            # echo "   \"romtype\": \"Official\"," >> $file_path.json
+            # echo "   \"size\": ${file_size}," >> $file_path.json
+            # echo "   \"url\": \"${link}\"," >> $file_path.json
+            # echo "   \"version\": \"10\"" >> $file_path.json
             echo "}" >> $file_path.json
             echo -e "${GREEN}Done generating ${YELLOW}${file_name}.json${NC}"
         else
