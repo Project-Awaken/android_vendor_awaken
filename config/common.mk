@@ -111,6 +111,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AwakenWallpaperStub
 
+# Themes
+PRODUCT_PACKAGES += \
+    AwakenBlackTheme
+
 # Charger
 ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
