@@ -20,3 +20,8 @@ endif
 
 # Declare it's a Awaken build
 AWAKEN_BUILD := true
+
+ifneq ($(OVERRIDE_OTA_CHANNEL),)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        awaken.updater.uri=$(OVERRIDE_OTA_CHANNEL)
+endif
