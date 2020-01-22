@@ -137,4 +137,4 @@ PRODUCT_PACKAGES += \
 -include packages/apps/Plugins/plugins.mk
 
 # Include Xtended Switch Styles
-include vendor/awaken/Switch/switch.mk
+include vendor/awaken/switch/switch.mk
