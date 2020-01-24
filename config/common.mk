@@ -136,6 +136,10 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 # Bootanimation
 $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig \
