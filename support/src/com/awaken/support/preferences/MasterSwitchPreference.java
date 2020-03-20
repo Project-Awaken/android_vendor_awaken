@@ -18,11 +18,15 @@ package com.awaken.support.preferences;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import androidx.preference.PreferenceViewHolder;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Switch;
+
+import androidx.core.content.res.TypedArrayUtils;
+import androidx.preference.PreferenceViewHolder;
 
 import com.awaken.support.R;
 
@@ -36,21 +40,29 @@ public class MasterSwitchPreference extends TwoTargetPreference {
     private boolean mChecked;
     private boolean mEnableSwitch = true;
 
+    private final Context mContext;
+    private final Vibrator mVibrator;
+
     public MasterSwitchPreference(Context context, AttributeSet attrs,
                                   int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+
+        mContext = context;
+        mVibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
     }
 
     public MasterSwitchPreference(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+        this(context, attrs, defStyleAttr, 0);
     }
 
     public MasterSwitchPreference(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, TypedArrayUtils.getAttr(context,
+                androidx.preference.R.attr.switchPreferenceStyle,
+                android.R.attr.switchPreferenceStyle));
     }
 
     public MasterSwitchPreference(Context context) {
-        super(context);
+        this(context, null);
     }
 
     @Override
@@ -75,6 +87,7 @@ public class MasterSwitchPreference extends TwoTargetPreference {
                     } else {
                         persistBoolean(mChecked);
                     }
+                    doHapticFeedback();
                 }
             });
         }
@@ -142,5 +155,14 @@ public class MasterSwitchPreference extends TwoTargetPreference {
         // Using getString instead of getInt so we can simply check for null
         // instead of catching an exception. (All values are stored as strings.)
         return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
+    }
+
+    private void doHapticFeedback() {
+        final boolean hapticEnabled = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.HAPTIC_FEEDBACK_ENABLED, 1) != 0;
+
+        if (hapticEnabled) {
+            mVibrator.vibrate(VibrationEffect.get(VibrationEffect.EFFECT_CLICK));
+        }
     }
 }
