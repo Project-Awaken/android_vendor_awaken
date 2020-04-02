@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
     WeatherIcons \
     TouchGestures \
     QuickAccessWallet \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    StitchImage
 
 ifeq ($(AWAKEN_BUILD_TYPE),OFFICIAL)
 ifeq ($(USE_GAPPS),true)
