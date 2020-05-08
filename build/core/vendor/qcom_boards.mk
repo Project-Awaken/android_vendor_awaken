@@ -2,6 +2,7 @@
 MSMNILE := msmnile #SM8150
 MSMSTEPPE := sm6150
 TRINKET := trinket #SM6125
+ATOLL := atoll #SM6250
 
 # Board platforms lists to be used for
 # PRODUCT_BOARD_PLATFORM specific featurization
@@ -33,6 +34,7 @@ QCOM_BOARD_PLATFORMS += sdm845
 QCOM_BOARD_PLATFORMS += $(TRINKET)
 QCOM_BOARD_PLATFORMS += $(MSMSTEPPE)
 QCOM_BOARD_PLATFORMS += $(MSMNILE)
+QCOM_BOARD_PLATFORMS += $(ATOLL)
 
 # MSM7000 Family
 
