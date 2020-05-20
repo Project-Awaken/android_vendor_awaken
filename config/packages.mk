@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     CustomDoze \
     StitchImage \
     ThemePicker \
-    PixelThemesStub2019
+    PixelThemesStub2019 \
+    MatchmakerPrebuilt
 
 # Custom Overlays
 # Settings
