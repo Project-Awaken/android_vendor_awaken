@@ -43,3 +43,7 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 -include vendor/awaken/config/overlay.mk
+
+# Google icons mess
+PRODUCT_PACKAGES += \
+    wellbeingconf
