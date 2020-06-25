@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-awaken-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-awaken-product.xml \
     vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-awaken-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-awaken-system.xml
 
+# Livedisplay
+PRODUCT_COPY_FILES += \
+    vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
+
 # system mount
 PRODUCT_COPY_FILES += \
     vendor/awaken/build/tools/system-mount.sh:install/bin/system-mount.sh
