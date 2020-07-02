@@ -135,3 +135,6 @@ PRODUCT_PACKAGES += \
     googleconf
 
 -include packages/apps/Plugins/plugins.mk
+
+# Include Xtended Switch Styles
+include vendor/awaken/Switch/switch.mk
