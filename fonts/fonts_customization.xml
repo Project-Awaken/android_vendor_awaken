@@ -72,4 +72,9 @@
         <font weight="700" style="italic">Inter-BoldItalic.ttf</font>
     </family>
     <alias name="inter-medium" to="inter" weight="500" />
+
+    <family customizationType="new-named-family" name="linotte">
+        <font weight="300" style="normal">Linotte.ttf</font>
+    </family>
+
 </fonts-modification>
