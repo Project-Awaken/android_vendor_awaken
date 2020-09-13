@@ -75,53 +75,51 @@ endef
 # The following utilities are meant for board platform specific
 # featurisation
 
-ifndef get-vendor-board-platforms
 # $(call get-vendor-board-platforms,v)
 # returns list of board platforms for vendor v
 define get-vendor-board-platforms
-$(if $(call match-word,$(BOARD_USES_$(1)_HARDWARE),true),$($(1)_BOARD_PLATFORMS))
+$(if $(call match-word,$(PRODUCT_USES_$(1)_HARDWARE),true),$($(1)_BOARD_PLATFORMS))
 endef
-endif # get-vendor-board-platforms
 
 # $(call is-board-platform,bp)
 # returns true or empty
 define is-board-platform
-$(call match-word,$(1),$(TARGET_BOARD_PLATFORM))
+$(call match-word,$(1),$(PRODUCT_BOARD_PLATFORM))
 endef
 
 # $(call is-not-board-platform,bp)
 # returns true or empty
 define is-not-board-platform
-$(if $(call match-word,$(1),$(TARGET_BOARD_PLATFORM)),,true)
+$(if $(call match-word,$(1),$(PRODUCT_BOARD_PLATFORM)),,true)
 endef
 
 # $(call is-board-platform-in-list,bpl)
 # returns true or empty
 define is-board-platform-in-list
-$(call match-word-in-list,$(TARGET_BOARD_PLATFORM),$(1))
+$(call match-word-in-list,$(PRODUCT_BOARD_PLATFORM),$(1))
 endef
 
 # $(call is-vendor-board-platform,vendor)
 # returns true or empty
 define is-vendor-board-platform
 $(strip \
-  $(call match-word-in-list,$(TARGET_BOARD_PLATFORM),\
+  $(call match-word-in-list,$(PRODUCT_BOARD_PLATFORM),\
     $(call get-vendor-board-platforms,$(1)) \
   ) \
 )
 endef
 
 # $(call is-chipset-in-board-platform,chipset)
-# does a prefix match of chipset in TARGET_BOARD_PLATFORM
-# uses underscore as a delimiter
+# does a prefix match of chipset in PRODUCT_BOARD_PLATFORM
+# uses _underscore as a delimiter
 #
 # returns true or empty
 define is-chipset-in-board-platform
-$(call match-prefix,$(1),$(underscore),$(TARGET_BOARD_PLATFORM))
+$(call match-prefix,$(1),$(_underscore),$(PRODUCT_BOARD_PLATFORM))
 endef
 
 # $(call is-chipset-prefix-in-board-platform,prefix)
-# does a chipset prefix match in TARGET_BOARD_PLATFORM
+# does a chipset prefix match in PRODUCT_BOARD_PLATFORM
 # assumes '_' and 'a' as the delimiter to the chipset prefix
 #
 # How it works
@@ -135,8 +133,8 @@ $(strip \
   $(eval delim_a := $(empty)a$(empty)) \
   $(if \
     $(or \
-      $(call match-prefix,$(1),$(delim_a),$(TARGET_BOARD_PLATFORM)), \
-      $(call match-prefix,$(1),$(underscore),$(TARGET_BOARD_PLATFORM)), \
+      $(call match-prefix,$(1),$(delim_a),$(PRODUCT_BOARD_PLATFORM)), \
+      $(call match-prefix,$(1),$(_underscore),$(PRODUCT_BOARD_PLATFORM)), \
     ), \
     true, \
   ) \

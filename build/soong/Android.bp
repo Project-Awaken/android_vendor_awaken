@@ -1,14 +1,15 @@
 bootstrap_go_package {
-    name: "soong-lineage",
-    pkgPath: "lineage/soong/android",
+    name: "soong-awaken",
+    pkgPath: "awaken/soong/android",
     srcs: [
+        "android/config.go",
         "android/variable.go",
     ],
 }
 
 bootstrap_go_package {
-    name: "soong-lineage-generator",
-    pkgPath: "lineage/soong/generator",
+    name: "soong-awaken-generator",
+    pkgPath: "awaken/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",
@@ -23,15 +24,14 @@ bootstrap_go_package {
     pluginFor: ["soong_build"],
 }
 
-lineage_generator {
+awaken_generator {
     name: "generated_kernel_includes",
 
     // The headers make command
-    cmd: "$(PATH_OVERRIDE_SOONG) $(KERNEL_MAKE_CMD) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(KERNEL_BUILD_OUT_PREFIX)$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) headers_install",
+    cmd: "PATH=$(ORIG_PATH) $(MAKE_PREBUILT) $(KERNEL_MAKE_FLAGS) -C $(TARGET_KERNEL_SOURCE) O=$(genDir) ARCH=$(KERNEL_ARCH) $(KERNEL_CROSS_COMPILE) $(KERNEL_CLANG_TRIPLE) $(KERNEL_CC) headers_install",
 
     // Directories that can be imported by a cc_* module generated_headers property
     export_include_dirs: [
-        "usr/audio/include/uapi",
         "usr/include",
         "usr/include/audio/include/uapi",
         "usr/techpack/audio/include"
