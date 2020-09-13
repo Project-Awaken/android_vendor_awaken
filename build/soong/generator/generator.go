@@ -29,7 +29,7 @@ import (
 )
 
 func init() {
-	android.RegisterModuleType("lineage_generator", GeneratorFactory)
+	android.RegisterModuleType("awaken_generator", GeneratorFactory)
 
 	pctx.HostBinToolVariable("sboxCmd", "sbox")
 }
@@ -121,9 +121,8 @@ func (g *Module) DepsMutator(ctx android.BottomUpMutatorContext) {
 	android.ExtractSourcesDeps(ctx, g.properties.Tool_files)
 	if g, ok := ctx.Module().(*Module); ok {
 		if len(g.properties.Tools) > 0 {
-			ctx.AddFarVariationDependencies([]blueprint.Variation{
-				{"arch", ctx.Config().BuildOsVariant},
-			}, hostToolDepTag, g.properties.Tools...)
+			ctx.AddFarVariationDependencies(ctx.Config().BuildOSTarget.Variations(),
+			hostToolDepTag, g.properties.Tools...)
 		}
 	}
 }
@@ -214,12 +213,12 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	if depRoot == "" {
 		depRoot = ctx.ModuleDir()
 	} else {
-		depRoot = lineageExpandVariables(ctx, depRoot)
+		depRoot = awakenExpandVariables(ctx, depRoot)
 	}
 
 	// Glob dep_files property
 	for _, dep_file := range g.properties.Dep_files {
-		dep_file = lineageExpandVariables(ctx, dep_file)
+		dep_file = awakenExpandVariables(ctx, dep_file)
 		globPath := filepath.Join(depRoot, dep_file)
 		paths, err := ctx.GlobWithDeps(globPath, nil)
 		if err != nil {
@@ -231,7 +230,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 		}
 	}
 
-	cmd := lineageExpandVariables(ctx, String(g.properties.Cmd))
+	cmd := awakenExpandVariables(ctx, String(g.properties.Cmd))
 
 	rawCommand, err := android.Expand(cmd, func(name string) (string, error) {
 		switch name {
