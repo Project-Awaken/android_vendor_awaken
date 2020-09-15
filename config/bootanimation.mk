@@ -16,5 +16,14 @@
 #
 
 # Boot Animation
+scr_resolution := 1440
+awaken_device := $(patsubst %f,%,$(subst awaken_,,$(TARGET_PRODUCT)))
+
+ifneq ($(filter mido oneplus3,$(awaken_device)),)
+scr_resolution := 1080
+endif
+
+ifneq ($(wildcard vendor/awaken/bootanimation/$(scr_resolution).zip),)
 PRODUCT_COPY_FILES += \
-    vendor/awaken/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+    vendor/awaken/bootanimation/$(scr_resolution).zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+endif
