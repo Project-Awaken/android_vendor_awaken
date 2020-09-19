@@ -1,7 +1,7 @@
 include vendor/awaken/build/core/vendor/*.mk
 
 ifeq ($(USE_GAPPS),true)
-$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
 endif
 
 ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
