@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     FontArbutusSourceOverlay \
     FontArvoLatoOverlay \
     FontRubikRubikOverlay \
-    FontGoogleSansOverlay \
     FontOnePlusSlateOverlay \
     FontBarlowOverlay \
     FontSanFranciscoOverlay \
