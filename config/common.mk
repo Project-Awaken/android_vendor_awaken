@@ -1,5 +1,9 @@
 include vendor/awaken/build/core/vendor/*.mk
 
+ifeq ($(IS_PHONE),true)
+include vendor/awaken/config/gsm.mk
+endif
+
 ifeq ($(USE_GAPPS),true)
 $(call inherit-product, vendor/google/gms/config.mk)
 endif
