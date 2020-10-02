@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += \
     IconShapeTaperedRectOverlay \
     IconShapeVesselOverlay
 
+# Navbar
+PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayLong \
+    GesturalNavigationOverlayMedium
+
 # Cutout Overlays
 ifeq ($(TARGET_HAS_NOTCH),true)
 PRODUCT_PACKAGES += \
