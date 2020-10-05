@@ -33,8 +33,11 @@
     <color name="accent_device_default_dark">#ff8ab4f8</color>
     <color name="accent_device_default_50">#ffe8f0fe</color>
 
-    <color name="primary_dark_device_default_settings">#1C1C1E</color>
     <color name="background_device_default_dark">#1C1C1E</color>
+    <color name="primary_dark_device_default_settings">@color/background_device_default_dark</color>
+
+    <!-- Dark background dimmed by 2% in HSL, used for notifications and QS -->
+    <color name="background_floating_device_default_dark">#19191A</color>
 
     <color name="list_divider_color_dark">#404043</color>
 
