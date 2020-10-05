@@ -117,4 +117,7 @@
     <!-- Name of the font family used for system surfaces where the font should use medium weight -->
     <string name="config_headlineFontFamilyMedium" translatable="false">inter-medium</string>
 
+    <!-- Whether or not to add a "people" notifications section -->
+    <bool name="config_usePeopleFiltering">true</bool>
+
 </resources>
