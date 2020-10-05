@@ -19,10 +19,8 @@
 <resources>
 
     <color name="background_device_default_light">#ffffffff</color>
-    <color name="background_device_default_dark">#ff212121</color>
     <color name="background_floating_device_default_dark">#ff313235</color>
     <color name="primary_device_default_dark">#ff212121</color>
-    <color name="primary_device_default_settings">#ff212121</color>
     <color name="primary_dark_device_default_dark">#ff212121</color>
     <color name="primary_device_default_settings_light">#ffffffff</color>
     <color name="primary_dark_device_default_settings">#ff212121</color>
@@ -34,5 +32,8 @@
     <color name="accent_device_default_light">#ff1a73e8</color>
     <color name="accent_device_default_dark">#ff8ab4f8</color>
     <color name="accent_device_default_50">#ffe8f0fe</color>
+
+    <color name="primary_dark_device_default_settings">#1C1C1E</color>
+    <color name="background_device_default_dark">#1C1C1E</color>
 
 </resources>
