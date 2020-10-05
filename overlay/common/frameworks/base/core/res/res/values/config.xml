@@ -71,4 +71,7 @@
     <string name="config_defaultTextClassifierPackage">com.google.android.as</string>
     <string name="config_defaultListenerAccessPackages">com.android.launcher3:com.google.android.as</string>
 
+    <!-- If this is true, long press on power button will be available from the non-interactive state -->
+    <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
 </resources>
