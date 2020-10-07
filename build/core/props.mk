@@ -13,4 +13,5 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.mod.version=$(BUILD_ID)-$(BUILD_DATE)-$(AWAKEN_BASE_VERSION) \
     ro.awaken.fingerprint=$(ROM_FINGERPRINT) \
     ro.awaken.buildtype=$(AWAKEN_BUILD_TYPE) \
-    ro.awaken.device=$(TARGET_PRODUCT)
+    ro.awaken.device=$(TARGET_PRODUCT) \
+    ro.awaken.build_date=$(BUILD_DATE)
