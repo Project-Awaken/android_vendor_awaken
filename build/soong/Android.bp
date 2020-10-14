@@ -1,12 +1,4 @@
 bootstrap_go_package {
-    name: "soong-awaken",
-    pkgPath: "awaken/soong/android",
-    srcs: [
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
     name: "soong-awaken-generator",
     pkgPath: "awaken/soong/generator",
     deps: [
