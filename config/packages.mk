@@ -8,7 +8,6 @@ PRODUCT_PACKAGES += \
     StitchImage \
     ThemePicker \
     PixelThemesStub2019 \
-    MatchmakerPrebuilt \
     WallpaperPickerGoogle \
     OmniJaws \
     WeatherIcons \
