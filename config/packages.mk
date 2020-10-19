@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
     MatchmakerPrebuilt \
     WallpaperPickerGoogle \
     OmniJaws \
-    WeatherIcons
+    WeatherIcons \
+    TouchGestures
 
 # Custom Overlays
 # Settings
