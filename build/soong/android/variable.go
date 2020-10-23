@@ -40,6 +40,9 @@ type Product_variables struct {
 		Header_libs []string
 		Required []string
 	}
+        Target_uses_prebuilt_dynamic_partitions struct {
+		Cflags []string
+	}
 	Uses_generic_camera_parameter_library struct {
 		Srcs []string
 	}
@@ -110,6 +113,7 @@ type ProductVariables struct {
 	Target_init_vendor_lib					*string `json:",omitempty"`
 	Target_uses_eigen						*bool `json:",omitempty"`
 	Target_uses_qml							*bool `json:",omitempty"`
+	Target_uses_prebuilt_dynamic_partitions  *bool `json:",omitempty"`
 	Uses_generic_camera_parameter_library	*bool `json:",omitempty"`
 	Uses_qti_camera_device					*bool `json:",omitempty"`
 	Additional_gralloc_10_usage_bits		*string `json:",omitempty"`
