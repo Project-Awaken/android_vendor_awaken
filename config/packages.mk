@@ -23,7 +23,9 @@ PRODUCT_PACKAGES += \
     SystemStyleOverlay \
     SystemUIStyleOverlay \
     SystemNightOverlay \
-    SystemUINightOverlay
+    SystemUINightOverlay \
+    SystemAwakenClearOverlay \
+    SystemUIAwakenClearOverlay
 
 # Local Updater
 ifneq ($(AB_OTA_PARTITIONS),)
