@@ -22,7 +22,7 @@
 
     <color name="theme_generic_semi_transparent_color">@*android:color/primary_dark_device_default_settings</color>
 
-    <color name="du_themes_qs_inactive_color">@*android:color/primary_dark_device_default_settings</color>
+    <color name="qs_inactive_color">@*android:color/primary_dark_device_default_settings</color>
 
     <!-- Resolver -->
     <color name="resolver_list_bg">@*android:color/primary_dark_device_default_settings</color>
