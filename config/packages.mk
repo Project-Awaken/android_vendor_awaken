@@ -60,7 +60,8 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     OmniJaws \
     WeatherIcons \
-    TouchGestures
+    TouchGestures \
+    QuickAccessWallet
 
 # Custom Overlays
 # Settings
