@@ -7,6 +7,7 @@ PRODUCT_PACKAGES += \
     CustomDoze \
     StitchImage \
     ThemePicker \
+    MatchmakerPrebuilt \
     WallpaperPickerGoogle \
     OmniJaws \
     WeatherIcons \
