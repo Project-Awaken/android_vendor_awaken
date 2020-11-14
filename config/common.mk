@@ -5,6 +5,10 @@ ifeq ($(USE_GAPPS),true)
 $(call inherit-product, vendor/gapps/gapps.mk)
 endif
 
+ifeq ($(TARGET_SUPPORTS_UPDATABLE_APEX),true)
+$(call inherit-product, vendor/prebuilts/config/apex.mk)
+endif
+
 ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
 include vendor/awaken/build/core/ProductConfigQcom.mk
 endif
