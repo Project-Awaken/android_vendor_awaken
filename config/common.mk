@@ -3,7 +3,6 @@ include vendor/awaken/config/gsm.mk
 
 ifeq ($(USE_GAPPS),true)
 $(call inherit-product, vendor/gapps/gapps.mk)
-$(call inherit-product, vendor/prebuilts/config/apex.mk)
 endif
 
 ifeq ($(PRODUCT_USES_QCOM_HARDWARE), true)
