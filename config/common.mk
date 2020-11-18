@@ -95,8 +95,7 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/awaken/bootanimation/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
+$(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
 # Config
 PRODUCT_PACKAGES += \
