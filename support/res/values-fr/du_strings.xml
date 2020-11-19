@@ -28,4 +28,8 @@
     <string name="active_edge_app_select_title">Sélectionner l\'application</string>
     <string name="active_edge_activity_select_title">Sélectionner l\'activité</string>
 
+    <string name="edit_hint">Valeur</string>
+    <string name="seek_value_edit_label">Régler la valeur</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
 </resources>
