@@ -46,9 +46,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 ifneq ($(AB_OTA_PARTITIONS),)
 PRODUCT_COPY_FILES += \
-    vendor/awaken/build/tools/backuptool_ab.sh:system/bin/backuptool_ab.sh \
-    vendor/awaken/build/tools/backuptool_ab.functions:system/bin/backuptool_ab.functions \
-    vendor/awaken/build/tools/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+    vendor/awaken/build/tools/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
+    vendor/awaken/build/tools/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
+    vendor/awaken/build/tools/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
 endif
 
 # copy privapp permissions
@@ -63,9 +63,9 @@ PRODUCT_COPY_FILES += \
 
 # backuptool
 PRODUCT_COPY_FILES += \
-    vendor/awaken/build/tools/backuptool.sh:install/bin/backuptool.sh \
-    vendor/awaken/build/tools/backuptool.functions:install/bin/backuptool.functions \
-    vendor/awaken/build/tools/50-awaken.sh:system/addon.d/50-awaken.sh
+    vendor/awaken/build/tools/backuptool.sh:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.sh \
+    vendor/awaken/build/tools/backuptool.functions:$(TARGET_COPY_OUT_SYSTEM)/install/bin/backuptool.functions \
+    vendor/awaken/build/tools/50-awaken.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-awaken.sh
 
 # Awaken-specific init file
 PRODUCT_COPY_FILES += \
