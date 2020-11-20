@@ -42,6 +42,7 @@
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
         <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
         <item>com.google.android.setupwizard/com.google.android.setupwizard.time.DateTimeCheck</item>
+        <item>com.google.android.as/com.google.intelligence.sense.ambientmusic.AmbientMusicSettingsActivity</item>
     </string-array>
 
     <!-- Whether device supports an alt. ambient display -->
