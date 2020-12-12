@@ -154,6 +154,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/init/init.awaken-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.awaken-updater.rc
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+    libtextclassifier_annotator_en_model \
+    libtextclassifier_annotator_universal_model \
+    libtextclassifier_actions_suggestions_universal_model \
+    libtextclassifier_lang_id_model
+
 # Themes
 PRODUCT_PACKAGES += \
     AwakenBlackTheme \
