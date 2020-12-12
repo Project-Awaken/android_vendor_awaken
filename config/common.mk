@@ -1,6 +1,9 @@
 include vendor/awaken/build/core/vendor/*.mk
 include vendor/awaken/config/gsm.mk
 
+# Inherit from textclassifier config
+$(call inherit-product, vendor/awaken/config/textclassifier.mk)
+
 ifeq ($(USE_GAPPS),true)
 $(call inherit-product, vendor/gapps/gapps.mk)
 endif
