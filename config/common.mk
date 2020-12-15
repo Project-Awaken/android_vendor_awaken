@@ -54,8 +54,7 @@ endif
 # copy privapp permissions
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-awaken-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-awaken-product.xml \
-    vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-awaken-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-awaken-system.xml \
-    vendor/awaken/prebuilt/common/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml
+    vendor/awaken/prebuilt/common/etc/permissions/privapp-permissions-awaken-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-awaken-system.xml
 
 # system mount
 PRODUCT_COPY_FILES += \
@@ -96,9 +95,6 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 endif
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
-
-# Inherit from sepolicy config
-$(call inherit-product, vendor/awaken/config/sepolicy.mk)
 
 # Fonts
 include vendor/awaken/config/fonts.mk
