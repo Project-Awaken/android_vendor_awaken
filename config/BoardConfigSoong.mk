@@ -40,6 +40,7 @@ SOONG_CONFIG_awakenGlobalVars += \
     has_legacy_camera_hal1 \
     ignores_ftp_pptp_conntrack_failure \
     needs_netd_direct_connect_rule \
+    target_camera_needs_client_info \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
@@ -81,6 +82,7 @@ SOONG_CONFIG_awakenQcomVars_uses_qcom_bsp_legacy := $(TARGET_USES_QCOM_BSP_LEGAC
 SOONG_CONFIG_awakenQcomVars_uses_qti_camera_device := $(TARGET_USES_QTI_CAMERA_DEVICE)
 SOONG_CONFIG_awakenGlobalVars_disable_postrender_cleanup := $(TARGET_DISABLE_POSTRENDER_CLEANUP)
 SOONG_CONFIG_awakenQcomVars_needs_camera_boottime_timestamp := $(TARGET_CAMERA_BOOTTIME_TIMESTAMP)
+SOONG_CONFIG_awakenGlobalVars_target_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
 
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
