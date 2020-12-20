@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
     OmniJaws \
     WeatherIcons \
     TouchGestures \
-    QuickAccessWallet
+    QuickAccessWallet \
+    SimpleDeviceConfig
 
 # Custom Overlays
 # Settings
