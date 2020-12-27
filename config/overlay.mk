@@ -14,19 +14,6 @@
 # limitations under the License.
 #
 
-# Accents
-PRODUCT_PACKAGES += \
-    AccentColorAmberOverlay \
-    AccentColorCoralOverlay \
-    AccentColorCyanOverlay \
-    AccentColorForestOverlay \
-    AccentColorLimeOverlay \
-    AccentColorMintOverlay \
-    AccentColorOrangeOverlay \
-    AccentColorPinkOverlay \
-    AccentColorRedOverlay \
-    AccentColorYellowOverlay
-
 # Fonts
 PRODUCT_PACKAGES += \
     FontArbutusSourceOverlay \
