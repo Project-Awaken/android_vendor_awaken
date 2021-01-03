@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
 
 # Awaken Packages
 PRODUCT_PACKAGES += \
+    Launcher3QuickStep \
     CustomDoze \
     StitchImage \
     ThemePicker \
