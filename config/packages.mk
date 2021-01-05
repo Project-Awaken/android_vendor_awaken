@@ -65,6 +65,11 @@ PRODUCT_PACKAGES += \
     QuickAccessWallet \
     SimpleDeviceConfig
 
+ifeq ($(BUILD_LIVEWALLPAPERS),true)
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt
+endif
+
 # Custom Overlays
 # Settings
 PRODUCT_PACKAGES += \
