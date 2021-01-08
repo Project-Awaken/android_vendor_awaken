@@ -11,7 +11,7 @@
     <bool name="config_showGesturalNavigationHints">true</bool>
     <bool name="config_bugReportHandlerEnabled">true</bool>
     <bool name="config_buttonTextAllCaps">false</bool>
-    <bool name="config_defaultRingtonePickerEnabled">false</bool>
+    <bool name="config_defaultRingtonePickerEnabled">true</bool>
     <bool name="config_sendPackageName">true</bool>
     <bool name="config_smart_battery_available">true</bool>
 </resources>
