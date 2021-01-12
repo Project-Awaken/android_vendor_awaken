@@ -103,10 +103,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 include vendor/awaken/config/fonts.mk
 
 # Overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/awaken/overlay \
-    vendor/awaken/overlay-pixel \
-
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/awaken/overlay/common \
-    vendor/awaken/overlay-pixel/common
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/awaken/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/awaken/overlay/common
