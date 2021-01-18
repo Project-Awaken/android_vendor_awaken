@@ -35,6 +35,10 @@ custom_dependencies = "awaken.dependencies"
 org_manifest = "awaken"  # leave empty if org is provided in manifest
 org_display = "Project-Awaken"  # needed for displaying
 
+default_manifest = ".repo/manifests/default.xml"
+awaken_manifest = ".repo/manifests/awaken.xml"
+lineage_manifest = ".repo/manifests/lineage.xml"
+
 github_token = None
 
 local_manifests = '.repo/local_manifests'
@@ -52,6 +56,15 @@ def add_auth(g_req):
             auth = None
     if github_token:
         g_req.add_header("Authorization", "token %s" % github_token)
+
+def exists_in_tree(lm, repository):
+     for child in lm.getchildren():
+        try:
+            if child.attrib['path'].endswith(repository):
+                return child
+        except:
+            pass
+     return None
 
 def indent(elem, level=0):
     # in-place prettyprint formatter
@@ -124,6 +137,9 @@ def is_in_manifest(project_path):
 
 def add_to_manifest(repos, fallback_branch=None):
     lm = load_manifest(custom_local_manifest)
+    mlm = load_manifest(default_manifest)
+    awakenm = load_manifest(awaken_manifest)
+    lineagem = load_manifest(lineage_manifest)
 
     for repo in repos:
 
@@ -152,6 +168,21 @@ def add_to_manifest(repos, fallback_branch=None):
         if is_in_manifest(repo_path):
             print('%s already exists in the manifest', repo_path)
             continue
+
+        existing_m_project = None
+        if exists_in_tree(mlm, repo_path) != None:
+           existing_m_project = exists_in_tree(mlm, repo_path)
+        elif exists_in_tree(awakenm, repo_path) != None:
+             existing_m_project = exists_in_tree(awakenm, repo_path)
+        elif exists_in_tree(lineagem, repo_path) != None:
+             existing_m_project = exists_in_tree(lineagem, repo_path)
+
+        if existing_m_project != None:
+            if existing_m_project.attrib['path'] == repo['target_path']:
+                print('%s already exists in main manifest, replacing with new dep' % repo_name)
+                lm.append(ElementTree.Element("remove-project", attrib = {
+                    "name": existing_m_project.attrib['name']
+                }))
 
         print('Adding dependency:\nRepository: %s\nBranch: %s\nRemote: %s\nPath: %s\n' % (repo_name, repo_branch,repo_remote, repo_path))
 
