@@ -63,8 +63,12 @@ PRODUCT_PACKAGES += \
     WeatherIcons \
     TouchGestures \
     QuickAccessWallet \
-    SimpleDeviceConfig \
+    SimpleDeviceConfig
+
+ifeq ($(AWAKEN_BUILD_TYPE),OFFICIAL)
+PRODUCT_PACKAGES += \
     Updater
+endif
 
 ifeq ($(BUILD_LIVEWALLPAPERS),true)
 PRODUCT_PACKAGES += \
