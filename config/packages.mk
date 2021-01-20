@@ -66,8 +66,10 @@ PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
 ifeq ($(AWAKEN_BUILD_TYPE),OFFICIAL)
+ifeq ($(USE_GAPPS),true)
 PRODUCT_PACKAGES += \
     Updater
+endif
 endif
 
 ifeq ($(BUILD_LIVEWALLPAPERS),true)
