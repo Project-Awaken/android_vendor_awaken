@@ -34,6 +34,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 endif
 
+# IORap app launch prefetching using Perfetto traces and madvise
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.iorapd.enable=true
+
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true \
     dalvik.vm.debug.alloc=0 \
