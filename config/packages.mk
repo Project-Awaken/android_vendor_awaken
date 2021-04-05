@@ -53,6 +53,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3QuickStep \
     CustomDoze \
+    GamingMode \
     StitchImage \
     ThemePicker \
     MatchmakerPrebuilt \
