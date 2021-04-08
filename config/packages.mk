@@ -1,7 +1,8 @@
 # Awaken packages
 PRODUCT_PACKAGES += \
     Updater \
-    ThemePicker
+    ThemePicker \
+    TouchGestures
 
 # Extra tools in Awaken
 PRODUCT_PACKAGES += \
