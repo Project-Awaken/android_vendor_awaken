@@ -148,7 +148,8 @@ $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 # Awaken packages
 PRODUCT_PACKAGES += \
     AwakenWallpaperStub \
-    RepainterServicePriv
+    RepainterServicePriv \
+    TouchGestures
 
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/init/init.awaken-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.awaken-updater.rc
