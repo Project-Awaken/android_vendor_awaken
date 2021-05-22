@@ -22,10 +22,11 @@ AWAKEN_TARGET_PACKAGE := $(PRODUCT_OUT)/$(AWAKEN_VERSION).zip
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(AWAKEN_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(AWAKEN_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(AWAKEN_TARGET_PACKAGE).md5sum
-	echo -e ${CL_BLD}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
-	echo -e ${CL_BLD}${CL_GRN}"Zip: "${CL_RED} $(AWAKEN_TARGET_PACKAGE)${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"MD5: "${CL_RED}" `cat $(AWAKEN_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Size:"${CL_RED}" `du -sh $(AWAKEN_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"TimeStamp:"${CL_RED}" `cat $(PRODUCT_OUT)/system/build.prop | grep ro.build.date.utc | cut -d'=' -f2 | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_GRN}"Integer Value:"${CL_RED}" `wc -c $(AWAKEN_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
-	echo -e ${CL_BLD}${CL_RED}"================================================================================"${CL_RED}
+	$(hide) ./vendor/awaken/tools/generate_json_build_info.sh $(AWAKEN_TARGET_PACKAGE)
+	echo -e ${CL_BLU}${CL_RED}"===============================-Package complete-==============================="${CL_RED}
+	echo -e ${CL_BLU}${CL_RST}"Zip: "${CL_RED} $(AWAKEN_VERSION).zip${CL_RST}
+	echo -e ${CL_BLU}${CL_RST}"MD5: "${CL_RED}" `cat $(AWAKEN_TARGET_PACKAGE).md5sum | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLU}${CL_RST}"Size:"${CL_RED}" `du -sh $(AWAKEN_TARGET_PACKAGE) | awk '{print $$1}' `"${CL_RST}
+	echo -e ${CL_BLU}${CL_RST}"ID:"${CL_RED}" `sha256sum $(AWAKEN_TARGET_PACKAGE) | cut -d ' ' -f 1`"${CL_RST}
+	echo -e ${CL_BLU}${CL_RST}"Path:"${CL_RED}" $(AWAKEN_TARGET_PACKAGE)"${CL_RST}
+	echo -e ${CL_BLU}${CL_RED}"================================================================================"${CL_RED}
