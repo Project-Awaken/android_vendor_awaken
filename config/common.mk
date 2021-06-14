@@ -30,11 +30,20 @@ PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/awaken/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
 
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/addon.d/50-lineage.sh
+
 ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/awaken/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/awaken/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/backuptool_ab.sh \
+    system/bin/backuptool_ab.functions \
+    system/bin/backuptool_postinstall.sh
+
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
@@ -160,6 +169,18 @@ PRODUCT_PACKAGES_DEBUG += \
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/awaken/config/permissions/privapp-permissions-awaken-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-awaken.xml
+
+# Extra tools
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/curl \
+    system/bin/getcap \
+    system/bin/setcap
+
+# These packages are excluded from user builds
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/procmem
+endif
 
 # Root
 PRODUCT_PACKAGES += \
