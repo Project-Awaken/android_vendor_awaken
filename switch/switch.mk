@@ -7,4 +7,5 @@ PRODUCT_PACKAGES += \
     Telegram \
     Retro \
     MD2 \
-    Stockish
+    Stockish \
+    AndroidS
