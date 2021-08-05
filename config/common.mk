@@ -106,6 +106,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.portal_notification=true
 endif
 
+# Gboard side padding
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.kb_pad_port_l=4 \
+    ro.com.google.ime.kb_pad_port_r=4 \
+    ro.com.google.ime.kb_pad_land_l=64 \
+    ro.com.google.ime.kb_pad_land_r=64
+
 # Include AOSP audio files
 include vendor/awaken/config/aosp_audio.mk
 
