@@ -198,4 +198,12 @@
     <!-- Whether to show estimate in QS header. Default to false in case there's not enough
      space -->
     <bool name="config_showBatteryEstimateQSBH">true</bool>
+
+    <!-- Control the default night mode to use when there is no other mode override set.
+         One of the following values (see UiModeManager.java):
+             0 - MODE_NIGHT_AUTO
+             1 - MODE_NIGHT_NO
+             2 - MODE_NIGHT_YES
+    -->
+    <integer name="config_defaultNightMode">2</integer>
 </resources>
