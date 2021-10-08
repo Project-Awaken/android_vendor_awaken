@@ -1,2 +1,2 @@
-# Include LineageOS versions
-include $(TOPDIR)vendor/lineage/build/core/main_version.mk
+# Include AwakenOS versions
+include $(TOPDIR)vendor/awaken/build/core/main_version.mk

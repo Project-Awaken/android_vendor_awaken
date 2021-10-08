@@ -1,5 +1,5 @@
 # Inherit common mobile Lineage stuff
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/awaken/config/common.mk)
 
 # Default notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
