@@ -63,6 +63,9 @@
         <!-- Keep up to 7 days of permission usage history -->
         <item>privacy/discrete_history_cutoff_millis=604800000</item>
 
+        <!-- Contribute app shortcuts to centralized AppSearch index -->
+        <item>systemui/shortcut_appsearch_integration=true</item>
+
         <!--
             Device Personalization Services (AiAi)
         -->
