@@ -19,6 +19,9 @@
 <resources>
     <bool name="def_wifi_on">true</bool>
 
+    <!-- Display -->
+    <bool name="def_one_handed_mode_enabled">true</bool>
+
     <!-- Initial value for the Settings.Secure.IMMERSIVE_MODE_CONFIRMATIONS setting,
          which is a comma separated list of packages that no longer need confirmation
          for immersive mode.
