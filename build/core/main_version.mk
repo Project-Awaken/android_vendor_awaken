@@ -12,4 +12,5 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.awaken.buildtype=$(AWAKEN_BUILD_TYPE) \
     ro.awaken.fingerprint=$(ROM_FINGERPRINT) \
     ro.awaken.version=$(AWAKEN_VERSION) \
+    ro.awaken.base.version=$(AWAKEN_NUM_VER) \
     ro.modversion=$(AWAKEN_VERSION)
