@@ -18,10 +18,11 @@ if [ "$1" ]; then
                 echo -e "${CL_GRN}Forced generation of json${CL_NC}"
             fi
             file_size=$(stat -c%s $file_path)
-            md5=$(cat "$file_path.md5sum" | cut -d' ' -f1)
+            md5=$(md5sum $file_path | awk '{ print $1 }');
             datetime=$(grep ro\.build\.date\.utc ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            id=$(sha256sum $file_path | awk '{ print $1 }');
-            build_type=$(grep ro\.awaken\.build\.type ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
+            id=$(cat "$file_path.sha256sum" | cut -d' ' -f1);
+            build_type=$(grep ro\.awaken\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
+            zip_type=$(grep ro\.awaken\.ziptype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             base_version=$(grep ro\.awaken\.base\.version ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             link="https://sourceforge.net/projects/project-awaken/files/${DEVICE}/${file_name}/download"
             echo "{" > $file_path.json
@@ -38,8 +39,8 @@ if [ "$1" ]; then
             echo "    }" >> $file_path.json
             echo "  ]" >> $file_path.json
             echo "}" >> $file_path.json
-            mv "${file_path}.json" "./out/target/product/$DEVICE/${DEVICE}.json"
-            echo -e "${CL_GRN}Done generating ${CL_RED}${DEVICE}.json${CL_NC}"
+            mv "${file_path}.json" "./${DEVICE}_${zip_type}.json"
+            echo -e "${CL_GRN}Done generating ${CL_RED}${DEVICE}_${zip_type}.json${CL_NC}"
         else
             echo -e "${CL_YLW}Skipped generating json for a non-official build${CL_NC}"
         fi
