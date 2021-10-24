@@ -54,6 +54,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/init/init.awaken-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.awaken-system_ext.rc
 
+# Enable gestural navigation overlay to match default navigation mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.sip.voip.xml
