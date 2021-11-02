@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Kepler
-AWAKEN_NUM_VER := 2.0
+AWAKEN_CODENAME := Luna
+AWAKEN_NUM_VER := 2.1
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
