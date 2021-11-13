@@ -19,4 +19,7 @@ include vendor/awaken/build/target/product/awaken_generic_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 
+# Enable mainline checking
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
+
 PRODUCT_NAME := awaken_arm64
