@@ -15,9 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_arm64.mk \
-    $(LOCAL_DIR)/awaken_arm64_ab.mk
+    $(LOCAL_DIR)/awaken_arm64.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_arm64-userdebug \
-    awaken_arm64_ab-userdebug
+    awaken_arm64-userdebug
