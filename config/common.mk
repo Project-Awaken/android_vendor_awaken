@@ -50,10 +50,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 endif
 
-# Backup Services whitelist
-PRODUCT_COPY_FILES += \
-    vendor/awaken/config/permissions/backup.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/backup.xml
-
 # Branding
 include vendor/awaken/config/branding.mk
 
