@@ -226,6 +226,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     AwakenLauncherOverlay \
+    CustomPixelLauncherOverlay \
     NetworkStackOverlay
 
 include vendor/awaken/config/branding.mk
