@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
 
 # Enable gestural navigation overlay to match default navigation mode
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural;com.google.android.systemui.gxoverlay
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
