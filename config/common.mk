@@ -137,8 +137,10 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
 # Charger
+ifeq ($(USE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \
     product_charger_res_images
+endif
 
 # Config
 PRODUCT_PACKAGES += \
