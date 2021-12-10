@@ -36,4 +36,7 @@
 
     <!-- UI touch sounds -->
     <bool name="def_sound_effects_enabled">false</bool>
+
+    <!-- Wireless Display -->
+    <bool name="def_wifi_display_on">true</bool>
 </resources>
