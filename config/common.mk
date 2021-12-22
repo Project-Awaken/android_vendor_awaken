@@ -151,8 +151,7 @@ endif
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig \
-    SettingsIntelligenceGooglePrebuilt
+    SimpleDeviceConfig
 
 # Storage manager
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -161,10 +160,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # These packages are excluded from user builds
 PRODUCT_PACKAGES_DEBUG += \
     procmem
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    vendor/awaken/config/permissions/privapp-permissions-awaken-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-awaken.xml
 
 # Extra tools
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
