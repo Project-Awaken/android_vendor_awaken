@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Ares
-AWAKEN_NUM_VER := 2.2
+AWAKEN_CODENAME := Nebula
+AWAKEN_NUM_VER := 2.3
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
