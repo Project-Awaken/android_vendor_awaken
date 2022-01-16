@@ -40,7 +40,6 @@
     <icon drawable="@drawable/themed_icon_bkash" package="com.bkash.customerapp" />
     <icon drawable="@drawable/themed_icon_bolt" package="ee.mtakso.client" />
     <icon drawable="@drawable/themed_icon_bradesco" package="com.bradesco" />
-    <icon drawable="@drawable/themed_icon_brave" package="com.brave.browser" />
     <icon drawable="@drawable/themed_icon_brawlstars" package="com.supercell.brawlstars" />
     <icon drawable="@drawable/themed_icon_bromite" package="org.bromite.bromite" />
     <icon drawable="@drawable/themed_icon_bstasion" package="com.bstar.intl" />
