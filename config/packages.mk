@@ -2,7 +2,8 @@
 PRODUCT_PACKAGES += \
     Updater \
     ThemePicker \
-    TouchGestures
+    TouchGestures \
+    RepainterServicePriv
 
 # Extra tools in Awaken
 PRODUCT_PACKAGES += \
