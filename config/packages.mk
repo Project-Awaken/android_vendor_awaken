@@ -4,6 +4,11 @@ PRODUCT_PACKAGES += \
     TouchGestures \
     RepainterServicePriv
 
+ifneq ($(USE_GAPPS),true)
+PRODUCT_PACKAGES += \
+    GmsCompat
+endif
+
 # Extra tools in Awaken
 PRODUCT_PACKAGES += \
     7z \
