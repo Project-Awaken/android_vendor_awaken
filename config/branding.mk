@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Aurora
-AWAKEN_NUM_VER := 2.4
+AWAKEN_CODENAME := Gaia
+AWAKEN_NUM_VER := 2.5
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 

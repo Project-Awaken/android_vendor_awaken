@@ -1,6 +1,5 @@
 # Awaken packages
 PRODUCT_PACKAGES += \
-    Updater \
     ThemePicker \
     TouchGestures \
     RepainterServicePriv
