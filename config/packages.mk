@@ -6,7 +6,9 @@ PRODUCT_PACKAGES += \
 
 ifneq ($(USE_GAPPS),true)
 PRODUCT_PACKAGES += \
-    GmsCompat
+    Apps \
+    GmsCompat \
+    Seedvault
 endif
 
 # Extra tools in Awaken
