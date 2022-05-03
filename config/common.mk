@@ -125,8 +125,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_land_l=64 \
     ro.com.google.ime.kb_pad_land_r=64
 
-# Include Pixel audio files
-include vendor/awaken/config/audio.mk
+# Include AOSP audio files
+include vendor/awaken/config/aosp_audio.mk
+
+# Include Awaken audio files
+include vendor/awaken/config/awaken_audio.mk
 
 # Include extra packages
 include vendor/awaken/config/packages.mk
