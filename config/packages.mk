@@ -7,7 +7,12 @@ PRODUCT_PACKAGES += \
 ifneq ($(USE_GAPPS),true)
 PRODUCT_PACKAGES += \
     Apps \
+    Backgrounds \
+    Eleven \
+    Etar \
+    ExactCalculator \
     GmsCompat \
+    Jelly \
     Seedvault
 endif
 

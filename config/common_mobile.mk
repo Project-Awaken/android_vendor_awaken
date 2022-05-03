@@ -8,16 +8,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.alarm_alert=Hassium.ogg
 endif
 
-# Apps
-PRODUCT_PACKAGES += \
-    Backgrounds \
-    Eleven \
-    Etar \
-    ExactCalculator \
-    Jelly \
-    Profiles \
-    Seedvault
-
 ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 PRODUCT_PACKAGES += \
     AudioFX

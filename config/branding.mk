@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Eclipse
-AWAKEN_NUM_VER := 2.6
+AWAKEN_CODENAME := Glacier
+AWAKEN_NUM_VER := 2.7
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
