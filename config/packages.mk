@@ -1,5 +1,6 @@
 # Awaken packages
 PRODUCT_PACKAGES += \
+    GameSpace \
     ThemePicker \
     TouchGestures \
     RepainterServicePriv
