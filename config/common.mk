@@ -60,6 +60,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/awaken/prebuilt/common/etc/init/init.awaken-system_ext.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.awaken-system_ext.rc
 
+# Display
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.sf.frame_rate_multiple_threshold=60
+
 # Enable gestural navigation overlay to match default navigation mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural;com.google.android.systemui.gxoverlay
