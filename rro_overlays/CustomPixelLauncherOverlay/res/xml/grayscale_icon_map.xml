@@ -261,6 +261,7 @@
     <icon drawable="@drawable/themed_icon_find_my_device" package="com.google.android.apps.adm" />
     <icon drawable="@drawable/themed_icon_firefox" package="org.mozilla.firefox" />
     <icon drawable="@drawable/themed_icon_firefox" package="org.mozilla.firefox_beta" />
+    <icon drawable="@drawable/themed_icon_firefox" package="us.spotco.fennec_dos" />
     <icon drawable="@drawable/themed_icon_fitbit" package="com.fitbit.FitbitMobile" />
     <icon drawable="@drawable/themed_icon_fiverr" package="com.fiverr.fiverr" />
     <icon drawable="@drawable/themed_icon_flamingo" package="com.samrustan.twitter" />
@@ -578,6 +579,7 @@
     <icon drawable="@drawable/themed_icon_resplash" package="com.b_lam.resplash" />
     <icon drawable="@drawable/themed_icon_resso" package="com.moonvideo.android.resso" />
     <icon drawable="@drawable/themed_icon_retro_music" package="code.name.monkey.retromusic" />
+    <icon drawable="@drawable/themed_icon_retro_music" package="io.github.muntashirakon.Music" />
     <icon drawable="@drawable/themed_icon_retro_music" package="io.github.muntashirakon.Music.debug" />
     <icon drawable="@drawable/themed_icon_retroarch" package="com.retroarch" />
     <icon drawable="@drawable/themed_icon_revolut" package="com.revolut.revolut" />
@@ -615,6 +617,7 @@
     <icon drawable="@drawable/themed_icon_signal" package="org.thoughtcrime.securesms" />
     <icon drawable="@drawable/themed_icon_simple_gallery_pro" package="com.simplemobiletools.gallery" />
     <icon drawable="@drawable/themed_icon_simple_gallery_pro" package="com.simplemobiletools.gallery.pro" />
+    <icon drawable="@drawable/themed_icon_simple_gallery_pro" package="deckers.thibault.aves" />
     <icon drawable="@drawable/themed_icon_simplenote" package="com.automattic.simplenote" />
     <icon drawable="@drawable/themed_icon_simplereboot" package="simple.reboot.com" />
     <icon drawable="@drawable/themed_icon_simply_bank" package="kz.simply" />
@@ -690,6 +693,7 @@
     <icon drawable="@drawable/themed_icon_tele2" package="ru.tele2.mytele2" />
     <icon drawable="@drawable/themed_icon_telegram" package="org.telegram.messenger" />
     <icon drawable="@drawable/themed_icon_telegram" package="org.telegram.messenger.web" />
+    <icon drawable="@drawable/themed_icon_telegram" package="com.evildayz.code.telegraher" />
     <icon drawable="@drawable/themed_icon_telegram_x" package="org.thunderdog.challegram" />
     <icon drawable="@drawable/themed_icon_telegraph" package="ir.ilmili.telegraph" />
     <icon drawable="@drawable/themed_icon_telegraphx" package="com.telex" />
