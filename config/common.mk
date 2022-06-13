@@ -109,10 +109,6 @@ endif
 # Fonts
 include vendor/awaken/config/fonts.mk
 
-# Game Overlay
-PRODUCT_COPY_FILES += \
-    vendor/awaken/prebuilt/common/etc/sysconfig/game_overlay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/game_overlay.xml
-
 # Gapps
 ifeq ($(USE_GAPPS),true)
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
