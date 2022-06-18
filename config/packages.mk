@@ -1,5 +1,6 @@
 # Awaken packages
 PRODUCT_PACKAGES += \
+    AwakenWallpaperStub \
     GameSpace \
     ThemePicker \
     TouchGestures \
