@@ -117,6 +117,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_land_l=64 \
     ro.com.google.ime.kb_pad_land_r=64
 
+# Google LILY_EXPERIENCE feature
+PRODUCT_COPY_FILES += \
+    vendor/awaken/prebuilt/common/etc/sysconfig/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
+
 # Include AOSP audio files
 include vendor/awaken/config/aosp_audio.mk
 
