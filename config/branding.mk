@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Plasma
-AWAKEN_NUM_VER := 2.8
+AWAKEN_CODENAME := Aero
+AWAKEN_NUM_VER := 2.9
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
