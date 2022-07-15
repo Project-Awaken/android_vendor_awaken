@@ -194,5 +194,8 @@ $(call inherit-product, vendor/awaken/config/rro_overlays.mk)
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/awaken/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/awaken/overlay/common
 
+PRODUCT_PACKAGES += \
+    NetworkStackOverlay
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/awaken/config/partner_gms.mk
