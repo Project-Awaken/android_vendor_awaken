@@ -14,4 +14,5 @@ PRODUCT_PACKAGES += \
     FontOnePlusSansOverlay \
     FontOneplusSlateSourceOverlay \
     FontOppoSansOverlay \
-    FontQuicksandOverlay
+    FontQuicksandOverlay \
+    FontSwitzerOverlay
