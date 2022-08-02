@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
     FontDMSansOverlay \
     FontHarmonySansOverlay \
     FontInterOverlay \
+    FontLexendOverlay \
     FontLinotteSourceOverlay \
     FontManropeOverlay \
     FontOnePlusSansOverlay \
