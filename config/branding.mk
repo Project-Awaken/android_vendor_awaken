@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := Aero
-AWAKEN_NUM_VER := 2.9
+AWAKEN_CODENAME := Stellar
+AWAKEN_NUM_VER := 2.10
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
