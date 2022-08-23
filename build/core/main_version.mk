@@ -4,22 +4,22 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-# LineageOS System Version
+ifeq ($(USE_GAPPS),true)
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.version=$(LINEAGE_VERSION) \
-    ro.lineage.releasetype=$(LINEAGE_BUILDTYPE) \
-    ro.lineage.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
-    ro.modversion=$(LINEAGE_VERSION) \
-    ro.lineagelegal.url=https://lineageos.org/legal
+    ro.awaken.ziptype=gapps
+else
+ADDITIONAL_SYSTEM_PROPERTIES += \
+    ro.awaken.ziptype=vanilla
+endif
 
-# LineageOS Platform Display Version
+# AwakenOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.display.version=$(LINEAGE_DISPLAY_VERSION)
-
-# LineageOS Platform SDK Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
-
-# LineageOS Platform Internal Version
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.awaken.display.version=$(AWAKEN_DISPLAY_VERSION) \
+    ro.awaken.build.version=$(AWAKEN_BUILD_VERSION) \
+    ro.awaken.build.date=$(BUILD_DATE) \
+    ro.awaken.buildtype=$(AWAKEN_BUILD_TYPE) \
+    ro.awaken.fingerprint=$(ROM_FINGERPRINT) \
+    ro.awaken.version=$(AWAKEN_VERSION) \
+    ro.awaken.base.codename=$(AWAKEN_CODENAME) \
+    ro.awaken.base.version=$(AWAKEN_NUM_VER) \
+    ro.modversion=$(AWAKEN_VERSION)

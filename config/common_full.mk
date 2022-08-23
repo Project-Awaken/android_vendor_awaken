@@ -1,5 +1,5 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common Awaken stuff
+$(call inherit-product, vendor/awaken/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
