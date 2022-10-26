@@ -54,6 +54,8 @@
 #                                          TARGET_KERNEL_CROSS_COMPILE_PREFIX
 #                                          is in PATH
 #   USE_CCACHE                         = Enable ccache (global Android flag)
+#
+#   TARGET_CLANG_PREBUILTS_PATH        = Override path for CLANG_PREBUILTS
 
 BUILD_TOP := $(abspath .)
 
@@ -86,7 +88,11 @@ else
     CLANG_PREBUILTS_VERSION := clang-r450784d
 endif
 
+ifneq ($(TARGET_CLANG_PREBUILTS_PATH),)
+CLANG_PREBUILTS := $(TARGET_CLANG_PREBUILTS_PATH)
+else
 CLANG_PREBUILTS := $(BUILD_TOP)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(CLANG_PREBUILTS_VERSION)
+endif
 
 ifneq ($(USE_CCACHE),)
     ifneq ($(CCACHE_EXEC),)
