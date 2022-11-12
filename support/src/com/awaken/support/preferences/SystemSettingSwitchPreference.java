@@ -1,6 +1,6 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2013 The CyanogenMod Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,33 +18,36 @@
 package com.awaken.support.preferences;
 
 import android.content.Context;
+import android.provider.Settings;
 import android.util.AttributeSet;
 
-public class SystemSettingSwitchPreference extends SwitchPreference {
+public class SystemSettingSwitchPreference extends SelfRemovingSwitchPreference {
 
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context) {
-        super(context);
-        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
+        super(context, null);
     }
 
     @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        // This is what default TwoStatePreference implementation is doing without respecting
-        // real default value:
-        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
-        //        : (Boolean) defaultValue);
-        // Instead, we better do
-        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
-                : (Boolean) defaultValue);
+    protected boolean isPersisted() {
+        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
+    }
+
+    @Override
+    protected void putBoolean(String key, boolean value) {
+        Settings.System.putInt(getContext().getContentResolver(), key, value ? 1 : 0);
+    }
+
+    @Override
+    protected boolean getBoolean(String key, boolean defaultValue) {
+        return Settings.System.getInt(getContext().getContentResolver(),
+                key, defaultValue ? 1 : 0) != 0;
     }
 }

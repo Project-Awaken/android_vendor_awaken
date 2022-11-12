@@ -21,4 +21,7 @@
     <uses-sdk
         android:minSdkVersion="27" />
 
+    <permission android:name="lineageos.permission.MANAGE_REMOTE_PREFERENCES"
+                android:protectionLevel="signature|privileged" />
+
 </manifest>
