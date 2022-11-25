@@ -145,6 +145,10 @@ SKIP_BOOT_JARS_CHECK := true
 # Bootanimation
 $(call inherit-product, vendor/awaken/config/bootanimation.mk)
 
+# BtHelper
+PRODUCT_PACKAGES += \
+    BtHelper
+
 # Awaken packages
 PRODUCT_PACKAGES += \
     AwakenWallpaperStub \
