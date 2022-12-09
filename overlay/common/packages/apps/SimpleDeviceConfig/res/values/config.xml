@@ -24,6 +24,9 @@
         <!-- Nexus (Pixel) Launcher -->
         <item>launcher/enable_one_search=true</item>
 
+        <!-- Enable the new and advanced Privacy Hub -->
+        <item>privacy/safety_center_is_enabled=true</item>
+
         <!-- System Ui -->
         <item>systemui/quick_access_wallet_enabled=true</item>
         <item>systemui/enable_screenshot_corner_flow=true</item>
