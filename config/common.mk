@@ -266,7 +266,8 @@ PRODUCT_PACKAGES += \
     AwakenLauncherOverlay \
     CustomPixelLauncherOverlay \
     NavigationBarModeGesturalOverlayFS \
-    NetworkStackOverlay
+    NetworkStackOverlay \
+    NexusLauncherResOverlay
 
 include vendor/awaken/config/branding.mk
 
