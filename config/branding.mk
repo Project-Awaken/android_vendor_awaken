@@ -15,8 +15,8 @@
 # limitations under the License.
 
 # Versioning System
-AWAKEN_CODENAME := triton
-AWAKEN_NUM_VER := 3.5
+AWAKEN_CODENAME := triton_void
+AWAKEN_NUM_VER := 3.6
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
