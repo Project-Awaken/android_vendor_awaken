@@ -33,6 +33,7 @@ SOONG_CONFIG_awakenGlobalVars += \
     bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
     disable_bluetooth_le_set_host_feature \
+    gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     target_health_charging_control_charging_path \
     target_health_charging_control_charging_enabled \
@@ -65,6 +66,7 @@ SOONG_CONFIG_awakenQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_awakenGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_awakenGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_awakenGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_awakenNvidiaVars_uses_nvidia_enhancements := $(NV_ANDROID_FRAMEWORK_ENHANCEMENTS)
@@ -74,6 +76,7 @@ SOONG_CONFIG_awakenQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PR
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED ?= 1
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED ?= 0
