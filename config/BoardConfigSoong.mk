@@ -28,6 +28,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += awakenGlobalVars
 SOONG_CONFIG_awakenGlobalVars += \
+    aapt_version_code \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     disable_bluetooth_le_read_buffer_size_v2 \
@@ -86,6 +87,7 @@ TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 
 # Soong value variables
+SOONG_CONFIG_awakenGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_awakenGlobalVars_additional_gralloc_10_usage_bits := $(TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS)
 SOONG_CONFIG_awakenGlobalVars_bootloader_message_offset := $(BOOTLOADER_MESSAGE_OFFSET)
 SOONG_CONFIG_awakenGlobalVars_disable_bluetooth_le_read_buffer_size_v2 := $(TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2)
