@@ -11,6 +11,6 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/awaken/overlay/dictionaries
 
 # Enable support of one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode=true
+    ro.support_one_handed_mode?=true
 
 $(call inherit-product, vendor/awaken/config/telephony.mk)
