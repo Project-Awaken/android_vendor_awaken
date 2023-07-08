@@ -4,14 +4,6 @@ ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 endif
 
-ifeq ($(USE_GAPPS),true)
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.awaken.ziptype=gapps
-else
-ADDITIONAL_SYSTEM_PROPERTIES += \
-    ro.awaken.ziptype=vanilla
-endif
-
 # AwakenOS Platform Display Version
 ADDITIONAL_SYSTEM_PROPERTIES += \
     ro.awaken.display.version=$(AWAKEN_DISPLAY_VERSION) \

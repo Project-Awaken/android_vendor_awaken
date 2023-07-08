@@ -19,7 +19,6 @@ if [ "$1" ]; then
             datetime=$(grep ro\.build\.date\.utc ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             id=$(cat "$file_path.sha256sum" | cut -d' ' -f1);
             build_type=$(grep ro\.awaken\.buildtype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
-            zip_type=$(grep ro\.awaken\.ziptype ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             base_version=$(grep ro\.awaken\.base\.version ./out/target/product/$DEVICE/system/build.prop | cut -d= -f2);
             link="https://sourceforge.net/projects/project-awaken/files/${DEVICE}/${file_name}/download"
             echo "{" > $file_path.json
@@ -36,8 +35,8 @@ if [ "$1" ]; then
             echo "    }" >> $file_path.json
             echo "  ]" >> $file_path.json
             echo "}" >> $file_path.json
-            mv "${file_path}.json" "./${DEVICE}_${zip_type}.json"
-            echo -e "${CL_CYN}Done generating ${CL_PRP}${DEVICE}_${zip_type}.json${CL_NC}"
+            mv "${file_path}.json" "./${DEVICE}.json"
+            echo -e "${CL_CYN}Done generating ${CL_PRP}${DEVICE}.json${CL_NC}"
         else
             echo -e "${CL_RED}Skipped generating json for a non-official build${CL_NC}"
         fi
