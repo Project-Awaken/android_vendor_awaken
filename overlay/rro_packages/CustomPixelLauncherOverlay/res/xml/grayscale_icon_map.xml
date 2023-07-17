@@ -109,6 +109,7 @@
     <icon drawable="@drawable/themed_icon_antennapod" package="de.danoeh.antennapod" />
     <icon drawable="@drawable/themed_icon_antutu" package="com.antutu.ABenchMark" />
     <icon drawable="@drawable/themed_icon_anxcam_s" package="com.android.camera" />
+    <icon drawable="@drawable/themed_icon_anxcam_s" package="com.oplus.camera" />
     <icon drawable="@drawable/themed_icon_any" package="com.anydesk.anydeskandroid" />
     <icon drawable="@drawable/themed_icon_anyboost" package="anyboost.app" />
     <icon drawable="@drawable/themed_icon_anythingtopip" package="com.vitolaminafra.imagetopip" />
