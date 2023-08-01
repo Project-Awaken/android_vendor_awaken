@@ -153,7 +153,6 @@
         <item>device_personalization_services/EchoSmartspace__strava_check_stop_action=true</item>
         <item>device_personalization_services/Echo__smartspace_dedupe_fast_pair_notification=true</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_aiai_loading_screen=false</item>
-        <item>device_personalization_services/Echo__smartspace_doorbell_allowlist_packages=com.nest.android, com.google.android.apps.chromecast.app</item>
         <item>device_personalization_services/Echo__smartspace_doorbell_loading_screen_state=4</item>
         <item>device_personalization_services/Echo__smartspace_enable_async_icon=true</item>
         <item>device_personalization_services/Echo__smartspace_enable_battery_notification_parser=true</item>
