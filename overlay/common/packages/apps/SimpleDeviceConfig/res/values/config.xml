@@ -22,10 +22,13 @@
         -->
 
         <!-- Nexus (Pixel) Launcher -->
+        <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
+        <item>launcher/ENABLE_LOCAL_RECOMMENDED_WIDGETS_FILTER=true</item>
         <item>launcher/enable_one_search=true</item>
         <item>launcher/enable_quick_launch_v3_qsb=true</item>
         <item>launcher/enable_quick_launch_v3_aa=true</item>
         <item>launcher/gboard_update_enter_key=true</item>
+        <item>launcher/enable_web_suggest_on_default_browser=true</item>
 
         <!-- Enable the new and advanced Privacy Hub -->
         <item>privacy/safety_center_is_enabled=true</item>
