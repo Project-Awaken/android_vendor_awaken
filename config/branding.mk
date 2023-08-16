@@ -16,7 +16,7 @@
 
 # Versioning System
 AWAKEN_CODENAME := triton_void
-AWAKEN_NUM_VER := 3.8
+AWAKEN_NUM_VER := 3.9
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
