@@ -18,7 +18,7 @@
 -->
 <resources>
 
-    <string name="calendar_component_name" translatable="false">org.lineageos.etar/com.android.calendar.AllInOneActivity</string>
-    <string name="clock_component_name" translatable="false">com.android.deskclock/com.android.deskclock.DeskClockApplication</string>
+    <string name="calendar_component_name" translatable="false">com.google.android.calendar/com.android.calendar.AllInOneActivity</string>
+    <string name="clock_component_name" translatable="false">com.google.android.deskclock/com.android.deskclock.DeskClock</string>
 
 </resources>
