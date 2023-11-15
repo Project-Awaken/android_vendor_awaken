@@ -79,6 +79,23 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Gapps
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
+
+PRODUCT_PACKAGES += \
+    FaceUnlockOverlay
+
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+PRODUCT_PACKAGES += \
+    ParanoidSense
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.sense_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+endif
+
 # Fonts
 include vendor/awaken/config/fonts.mk
 
