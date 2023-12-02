@@ -234,10 +234,14 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/awaken/overlay/no-rro
 
 PRODUCT_PACKAGES += \
+    CertifiedPropsOverlay \
     CustomPixelLauncherOverlay \
     DocumentsUIOverlay \
     NetworkStackOverlay \
     NexusLauncherResOverlay
+
+PRODUCT_COPY_FILES += \
+    vendor/awaken/config/config-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/overlay/config/config.xml
 
 include vendor/awaken/config/branding.mk
 
