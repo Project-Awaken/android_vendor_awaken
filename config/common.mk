@@ -258,6 +258,9 @@ PRODUCT_PACKAGES += \
     NetworkStackOverlay \
     NexusLauncherResOverlay
 
+PRODUCT_COPY_FILES += \
+    vendor/awaken/overlay/rro_packages/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml
+
 include vendor/awaken/certification/config.mk
 include vendor/awaken/config/branding.mk
 
