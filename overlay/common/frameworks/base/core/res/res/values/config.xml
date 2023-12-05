@@ -217,7 +217,7 @@
     <string name="config_clockFontFamily" translatable="false">google-sans-clock</string>
 
     <!-- the number of the max cached processes in the system. -->
-    <integer name="config_customizedMaxCachedProcesses">64</integer>
+    <integer name="config_customizedMaxCachedProcesses">1024</integer>
 
     <!-- Assign roles to AiAi and exempt it from privacy indicators -->
     <string name="config_systemAmbientAudioIntelligence">com.google.android.as</string>
