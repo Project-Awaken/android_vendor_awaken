@@ -6,12 +6,12 @@
 <resources>
     <!-- Build properties from a GMS certified device against current platform SPL level -->
     <string-array name="config_certifiedBuildProperties" translatable="false">
-        <item>PRODUCT:mata</item>
-        <item>DEVICE:mata</item>
-        <item>MANUFACTURER:Essential Products</item>
-        <item>BRAND:essential</item>
-        <item>MODEL:PH-1</item>
-        <item>FINGERPRINT:essential/mata/mata:8.1.0/OPM1.180104.092/224:user/release-keys</item>
-        <item>VERSION.SECURITY_PATCH:2018-03-05</item>
+        <item>PRODUCT:ferrari</item>
+        <item>DEVICE:ferrari</item>
+        <item>MANUFACTURER:Xiaomi</item>
+        <item>BRAND:Xiaomi</item>
+        <item>MODEL:Mi 4i</item>
+        <item>FINGERPRINT:Xiaomi/ferrari/ferrari:5.0.2/LRX22G/V6.4.10.0.LXIMICB:user/release-keys</item>
+        <item>VERSION.SECURITY_PATCH:2019-08-05</item>
     </string-array>
 </resources>
