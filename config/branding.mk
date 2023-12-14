@@ -16,7 +16,7 @@
 
 # Versioning System
 AWAKEN_CODENAME := ursa
-AWAKEN_NUM_VER := 4.0
+AWAKEN_NUM_VER := 4.1
 
 TARGET_PRODUCT_SHORT := $(subst awaken_,,$(AWAKEN_BUILD_TYPE))
 
