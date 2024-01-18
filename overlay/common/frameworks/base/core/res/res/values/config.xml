@@ -67,6 +67,7 @@
         <item>org.microg.nlp.backend.ichnaea</item>
         <item>org.microg.nlp.backend.apple</item>
         <item>org.fitchfamily.android.dejavu</item>
+        <item>co.aospa.sense</item>
     </string-array>
 
     <!-- Disable stock OTA components if installed -->
