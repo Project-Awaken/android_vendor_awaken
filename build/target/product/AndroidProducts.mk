@@ -27,6 +27,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/awaken_gsi_tv_x86_64.mk \
     $(LOCAL_DIR)/awaken_sdk_car_arm64.mk \
     $(LOCAL_DIR)/awaken_sdk_car_x86_64.mk \
+    $(LOCAL_DIR)/awaken_sdk_phone_arm64.mk \
     $(LOCAL_DIR)/awaken_sdk_phone_x86.mk \
     $(LOCAL_DIR)/awaken_sdk_phone_x86_64.mk \
     $(LOCAL_DIR)/awaken_sdk_tv_arm.mk \
@@ -45,6 +46,7 @@ COMMON_LUNCH_CHOICES := \
     awaken_gsi_tv_x86_64-userdebug \
     awaken_sdk_car_arm64-userdebug \
     awaken_sdk_car_x86_64-userdebug \
+    awaken_sdk_phone_arm64-userdebug \
     awaken_sdk_phone_x86-userdebug \
     awaken_sdk_phone_x86_64-userdebug \
     awaken_sdk_tv_arm-userdebug \
